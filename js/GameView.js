@@ -18,8 +18,8 @@ export default class GameVeiw {
     }
 
     updateTurn(game){
-        let playerX = document.querySelector(".game__header__player-x");
-        let playerO = document.querySelector(".game__header__player-o");
+        let playerX = document.querySelector(".game__player-x");
+        let playerO = document.querySelector(".game__player-o");
         
         if (game.turn === 'X'){
             playerX.classList.add('active');

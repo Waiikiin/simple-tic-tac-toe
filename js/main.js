@@ -27,4 +27,3 @@ function onRestartClick() {
     game = new Game();
     gameView.updateBoard(game);
 }
-
