@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  color: #436986;
+}
+
+.wrapper {
+  height: 800px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.left {
+  padding-right: 15%;
+}
+
+.restart {
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid #4c6986;
+  transition: all 0.5 ease;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.restart:hover {
+  background: #4c6986;
+  color: white;
+}
+
+.game {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game__header {
+  display: flex;
+  color: #9a9a9a;
+  font-size: 24px;
+}
+
+.game__player-x {
+  flex: 1;
+  border-bottom: 5px solid #eee;
+  padding-bottom: 8px;
+}
+
+.game__player-o {
+  flex: 1;
+  border-bottom: 5px solid #eee;
+  padding-bottom: 8px;
+}
+
+.game__player-x.active {
+  color: #0f31a3;
+  border-color: #0f31a3;
+}
+
+.game__player-o.active {
+  color: #b93c0b;
+  border-color: #b93c0b;
+}
+
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0px;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.game__board-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background-color: white;
+}
+
+.game__board-tile:not(:nth-child(3n)) {
+  border-right: 3px solid rgba(137, 163, 189, 0.58);
+}
+
+.game__board-tile:not(:nth-last-child(-n + 3)) {
+  border-bottom: 3px solid rgba(137, 163, 189, 0.58);
+}
+
+.tile-x {
+  color: #0f31a3;
+}
+
+.tile-o {
+  color: #b93c0b;
+}
+
+.tile-winner span {
+  color: #23ce6b;
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 50px;
+  }
+}
