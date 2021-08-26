@@ -33,7 +33,8 @@ export default class Game {
             [1,4,7],
             [2,5,8],
             [0,4,8],
-            [6,4,2]
+            [6,4,2],
+            [0,3,6]
         ]
 
         for (const combination of winningCombination){
